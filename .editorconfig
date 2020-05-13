@@ -1,0 +1,34 @@
+# https://editorconfig.org
+
+root = true
+
+##
+# Common
+##
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# JSON Files
+[*.{json,json5}]
+indent_size = 2
+
+# YAML Files
+[*.{yml,yaml}]
+indent_size = 2
+
+# Markdown Files
+[*.md]
+trim_trailing_whitespace = false
+
+# Bash Files
+[*.{sh,zsh}]
+end_of_line = lf
+
+# Bazel Files
+[*.{bzl,bazel}]
+indent_size = 4
