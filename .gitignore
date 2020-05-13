@@ -1,0 +1,6 @@
+.bazelrc.user
+.idea
+rules_pyenv-*.tar.gz
+dist
+bazel-out
+bazel-*

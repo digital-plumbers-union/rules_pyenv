@@ -16,8 +16,8 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "dpu_rules_pyenv",
-    urls = ["https://github.com/digital-plumbers-union/rules_pyenv/releases/download/0.1.0/rules_pyenv-0.1.0.tar.gz"],
-    sha256 = "",
+    urls = ["https://github.com/digital-plumbers-union/rules_pyenv/archive/v0.1.0.tar.gz"],
+    sha256 = "6dc7aaaa6e9a2b0f68e219afacebc2374313f4ff26c9c197d22e018b2160e39a",
 )
 
 load("@dpu_rules_pyenv//pyenv:defs.bzl", "pyenv_install")
@@ -33,7 +33,7 @@ pyenv_install(
 `rules_pyenv` allows projects to select between hermetic versions of Python controlled by Bazel or non-hermetic versions
 of Python managed by a pre-existing installation of [pyenv] or [pyenv-win] on the host machine.
 
-Hermtic use of `pyenv` is the default, simply declare your project's [py_runtime_pair] in your `WORKSPACE` file.
+Hermetic use of `pyenv` is the default, simply declare your project's [py_runtime_pair] in your `WORKSPACE` file.
 
 ``` bzl
 pyenv_install(
