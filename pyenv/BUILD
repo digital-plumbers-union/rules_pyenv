@@ -5,7 +5,7 @@ toolchain_type(name = "toolchain_type")
 filegroup(
     name = "srcs",
     srcs = [
-        "BUILD.bazel",
+        "BUILD",
         "defs.bzl",
     ],
 )
