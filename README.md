@@ -55,11 +55,24 @@ pyenv_install(
 )
 ```
 
+## Windows
+
+If you want to use ```rules_pyenv``` on Windows you should [enable symlinks](https://docs.bazel.build/versions/master/windows.html#enable-symlink-support)
+
+## Using the interpreter in repository rules
+
+The interpreters are exposed as files, so you can refer to them in a repository rule.
+
+You can refer to the ```python2``` interpreter as ```@pyenv//:py2/python``` and to the ```python3``` interpreter as ```@pyenv//:py3/python```.
+
+## Build problems
+
+```pyenv``` is building Python from sources, so you need all things necessary to build Python. If you have any problems regarding this, you should see [this page](https://github.com/pyenv/pyenv/wiki/common-build-problems) first.
+
 ## Caveats
 
 - This thing needs tests
 - This thing needs build automation
-- This thing hasn't been tried on Windows (yet); hence tests and build automation
 - You will probably find bugs. No, you're not crazy, it's just not working right; open an issue (PRs are welcome too)
 - Since the native Bazel rules only support CPython your use of `pyenv` is restricted to CPython versions 2 and 3. If
     you want additional support for other Python impl
