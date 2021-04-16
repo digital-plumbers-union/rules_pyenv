@@ -179,9 +179,9 @@ _pyenv_install = repository_rule(
         "py3_dir": attr.string(mandatory = True, doc = "directory for python3"),
         "hermetic": attr.bool(default = True, doc = "True if pyenv should be downloaded, False if local pyenv should be used"),
         "pyenv_repo": attr.string_dict(default = {
-            "url": "https://github.com/pyenv/pyenv/archive/v1.2.18.tar.gz",
-            "strip_prefix": "pyenv-1.2.18",
-            "sha256": "cc147f020178bb2f1ce0a8b9acb0bdf73979d967ce7d7415e22746e84e0eec7a"
+            "url": "https://github.com/pyenv/pyenv/archive/v1.2.26.tar.gz",
+            "strip_prefix": "pyenv-1.2.26",
+            "sha256": "004a47be4919ca717bee546d3062543d166c24678a21a9a5aa75f3bd0653c5d2"
         }, doc = "unix pyenv repository"),
         "pyenv_win_repo": attr.string_dict(default = {
             "url": "https://github.com/pyenv-win/pyenv-win/archive/v2.64.3.tar.gz",
