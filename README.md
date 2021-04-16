@@ -16,9 +16,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "dpu_rules_pyenv",
-    sha256 = "aa7473eb2e410cec894a92285ffe569b5cdcd46caa1e35ec9ef7e3ee4a5b0cbd",
-    strip_prefix = "rules_pyenv-0.1.3",
-    urls = ["https://github.com/digital-plumbers-union/rules_pyenv/archive/v0.1.3.tar.gz"],
+    sha256 = "d057168a757efa74e6345edd4776a1c0f38134c2d48eea4f3ef4783e1ea2cb0f",
+    strip_prefix = "rules_pyenv-0.1.4",
+    urls = ["https://github.com/digital-plumbers-union/rules_pyenv/archive/v0.1.4.tar.gz"],
 )
 
 load("@dpu_rules_pyenv//pyenv:defs.bzl", "pyenv_install")
