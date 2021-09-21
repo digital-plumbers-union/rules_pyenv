@@ -1,0 +1,12 @@
+workspace(name = "examples_p3_only")
+
+local_repository(
+    name = "dpu_rules_pyenv",
+    path = "../../",
+)
+
+load("@dpu_rules_pyenv//pyenv:defs.bzl", "pyenv_install")
+
+pyenv_install(
+    py3 = "3.7.7",
+)
