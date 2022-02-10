@@ -202,7 +202,8 @@ def pyenv_install(py2, py3, py2_dir = PY2_DEFAULT_DIR_NAME, py3_dir = PY3_DEFAUL
         py2 = py2,
         py3 = py3,
         py2_dir = py2_dir,
-        py3_dir = py3_dir
+        py3_dir = py3_dir,
+        **kwargs
     )
 
     native.register_toolchains("@{}//:python_toolchain".format(name))
