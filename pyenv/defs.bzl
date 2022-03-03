@@ -226,9 +226,9 @@ _pyenv_install = repository_rule(
         "py3_dir": attr.string(mandatory = True, doc = "directory for python3"),
         "hermetic": attr.bool(default = True, doc = "True if pyenv should be downloaded, False if local pyenv should be used"),
         "pyenv_repo": attr.string_dict(default = {
-            "url": "https://github.com/pyenv/pyenv/archive/v1.2.26.tar.gz",
-            "strip_prefix": "pyenv-1.2.26",
-            "sha256": "004a47be4919ca717bee546d3062543d166c24678a21a9a5aa75f3bd0653c5d2"
+            "url": "https://github.com/pyenv/pyenv/archive/v2.2.4.tar.gz",
+            "strip_prefix": "pyenv-2.2.4",
+            "sha256": "7eb5a444cbcde94cbc4f67d056dff3a4db1502d4c491d7fcabb7870d8ecb595a"
         }, doc = "unix pyenv repository"),
         "pyenv_win_repo": attr.string_dict(default = {
             "url": "https://github.com/pyenv-win/pyenv-win/archive/v2.64.3.tar.gz",
@@ -249,7 +249,8 @@ def pyenv_install(py3, py2 = None, py3_dir = PY3_DEFAULT_DIR_NAME, py2_dir = PY2
         py2 = py2,
         py3 = py3,
         py2_dir = py2_dir,
-        py3_dir = py3_dir
+        py3_dir = py3_dir,
+        **kwargs
     )
 
     native.register_toolchains("@{}//:python_toolchain".format(name))
