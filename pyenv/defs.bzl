@@ -39,14 +39,14 @@ exports_files([
 
 py_runtime(
     name = "python_{py2}_runtime",
-    files = glob(["versions/{py2}/**/*"], exclude_directories = 0),
+    files = glob(["versions/{py2}/**/*"], exclude_directories = 1, exclude = ["**/* *"]),
     interpreter = "versions/{py2}/{interpreter_path}",
     python_version = "PY2"
 )
 
 py_runtime(
     name = "python_{py3}_runtime",
-    files = glob(["versions/{py3}/**/*"], exclude_directories = 0),
+    files = glob(["versions/{py3}/**/*"], exclude_directories = 1, exclude = ["**/* *"]),
     interpreter = "versions/{py3}/{interpreter_path}",
     python_version = "PY3"
 )
@@ -72,7 +72,7 @@ exports_files([
 
 py_runtime(
     name = "python_{py3}_runtime",
-    files = glob(["versions/{py3}/**/*"], exclude_directories = 0),
+    files = glob(["versions/{py3}/**/*"], exclude_directories = 1, exclude = ["**/* *"]),
     interpreter = "versions/{py3}/{interpreter_path}",
     python_version = "PY3"
 )
